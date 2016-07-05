@@ -1,0 +1,22 @@
+validator.extend('isName', function (str) {
+        var message = "";
+
+        if(validator.isNull(str))
+            return false;
+        if(!validator.isAlpha(str))
+           return false;
+
+        return true;
+    });
+
+
+    $scope.valName = function() {
+        if(validator.isName($scope.isname))
+        {
+            $scope.mes_name ="Valid";
+        }
+        else
+        {
+            $scope.mes_name ="Invalid";
+        }
+    }

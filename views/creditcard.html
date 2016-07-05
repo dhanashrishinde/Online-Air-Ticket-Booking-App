@@ -1,0 +1,49 @@
+<!doctype html>
+<html ng-app="validator">
+<head>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.9/angular.min.js"></script>
+<script type="text/javascript" src="js/validator_core.js"></script>
+<script type="text/javascript" src="js/validator.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" />
+</head>
+<body background="images/Airliner.jpg">
+<header class="navbar navbar-inverse navbar-static-top">
+<h3 style="color:white"><b>Neha Vibhute</b></h3>
+</header>
+<div class="container">
+
+<div class="page-header" style ="color:white">
+	<h1>Credit Card Information</h1>
+</div>
+<form ng-controller="ValidateController">
+<div class="row">
+<div class="col-sm-4">
+<div class="jumbotron">
+	<div class="form-group"> 
+		<b>Payment Amount</b> <input type="text" size = "20" class="form-control" ng-model="amt" ng-change="valAmount()"> <a href = 'code_text/payment.txt'> View Code</a> {{mes_amt}} 
+	</div>
+	<div class="form-group"> 
+		<b>Card Holder Name</b> <input type="text" class="form-control" ng-model="cname" ng-change="valCredit()"> {{mes_alpha1}} 
+	</div>
+	<div class="form-group"> 
+		<b>Credit Card number</b> <input type="text"class="form-control"  ng-model="cnumber" ng-change="valCco()"><a href = 'code_text/credit16.txt'> View Code</a>{{mes_cco}}
+	</div>
+	<div class="form-group"> 
+		<b>Expiry Date</b> <input type="text" class="form-control" ng-model="isdate" ng-change="valDate()"> {{mes_date}}
+	</div>
+	<div class="form-group"> 
+		<b>Email Receipt</b> <input type="text" class="form-control" ng-model="isemail" ng-change="valEmail()"> <a href = 'code_text/email.txt'> View Code</a>{{mes_alpha}}
+	</div>
+	<a href = 'override.html' class = "btn btn-success"> Submit </a>
+</div>
+</div>
+<div class="col-sm-4">
+<img src="images/payment.png" class="img-rounded"> 
+</div>
+</div>
+
+</form>
+</form>
+</div>
+</body>
+</html>

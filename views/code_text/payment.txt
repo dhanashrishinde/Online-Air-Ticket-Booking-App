@@ -1,0 +1,13 @@
+$scope.valAmount = function() {
+
+        console.log(validator.isCurrency($scope.amt));
+
+        if(validator.isCurrency($scope.amt))
+        {
+            $scope.mes_amt = "Entered Currency is Valid";
+        }
+        else
+        {
+            $scope.mes_amt = "Entered Currency is not Valid";
+        }
+    }

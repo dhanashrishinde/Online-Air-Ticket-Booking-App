@@ -1,0 +1,25 @@
+validator.extend('isCreditCard', function (str,length) {
+    
+        if(validator.isNull(str))
+        return false;
+        if(!validator.isNumeric(str))
+        return false;
+        if(!validator.isLength(str, length, length))
+        return false;
+      
+        return true;    
+    });
+
+$scope.valCc = function() {
+     
+        console.log(validator.isCreditCard($scope.iscc,8));
+        
+        if(validator.isCreditCard($scope.iscc,8))
+        {
+            $scope.mes_cc = "Entered Value is valid 8 digit credit card!";
+        }
+        else 
+        {
+            $scope.mes_cc = "Entered value is not a valid 8 digit credit card!";
+        }    
+    }

@@ -1,0 +1,16 @@
+$scope.users = [{isuser:'neha20',pwd:'neha20'}, {isuser:'nischal25',pwd:'nischal25'}];
+
+    $scope.com = function() {
+        for(var i=0; i < $scope.users.length; i++)
+        {               
+            if(validator.equals($scope.users[i].isuser, $scope.isuser1))
+            {
+                $scope.mes_comp = "Valid username";
+                break;
+            }
+            else
+            {
+                $scope.mes_comp = "Invalid username";
+            }
+        }
+    }

@@ -1,0 +1,24 @@
+validator.extend('isMobilePhone', function (str) {
+        
+        if(validator.isNull(str))
+        return false;
+        if(!validator.isNumeric(str))
+        return false;
+        if(!validator.isLength(str, 10, 10))
+        return false;
+
+        return true;
+    }); 
+
+
+    $scope.valOver = function() {
+        console.log(validator.isMobilePhone($scope.isover))
+        if(validator.isMobilePhone($scope.isover))
+        {
+            $scope.mes_over = "Valid mobile phone number!" ;
+        }
+        else
+        {
+            $scope.mes_over = "Not a valid mobile phone number!";
+        }
+    }

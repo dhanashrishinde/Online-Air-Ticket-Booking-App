@@ -1,0 +1,13 @@
+$scope.valCco = function() {
+     
+        console.log(validator.isCreditCard($scope.cnumber,16));
+        
+        if(validator.isCreditCard($scope.cnumber,16))
+        {
+            $scope.mes_cco = "Valid 16 digit credit card!";
+        }
+        else 
+        {
+            $scope.mes_cco = "Invalid! Enter a valid 16 digit credit card!";
+        }
+    }

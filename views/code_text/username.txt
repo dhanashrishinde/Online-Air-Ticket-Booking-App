@@ -1,0 +1,23 @@
+validator.extend('isUsername', function (str) {
+        var message = "";
+
+        if(validator.isNull(str))
+           return false;
+        if(!validator.isAlphanumeric(str))
+            return false;
+        if(!validator.isLength(str, 5, 10))
+            return false;
+        return true;
+    });
+
+    $scope.valUser = function() {
+
+       if(validator.isUsername($scope.isuser)) 
+       {
+            $scope.mes_user ="Valid username";
+       }
+       else
+       {
+            $scope.mes_user ="Invalid username";
+       }
+    }

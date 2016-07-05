@@ -1,0 +1,48 @@
+<!doctype html>
+<html ng-app="validator">
+<head>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.9/angular.min.js"></script>
+<script type="text/javascript" src="js/validator_core.js"></script>
+<script type="text/javascript" src="js/validator.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" />
+</head>
+<body background="images/Airliner.jpg">
+<header class="navbar navbar-inverse navbar-static-top">
+     <h3 style="color:white"><b>Nischal Gowda</b></h3>
+</header>
+<div class="container">
+    <div class="page-header" style="color:white">
+        <h1>Registration</h1>
+    </div>
+    <form ng-controller="ValidateController">
+    <div class="row">
+<div class="col-sm-6">
+    <div class="jumbotron text-left">
+        <div class="form-group"> 
+            <b>Name</b> <input type="text" class = "form-control" ng-model="isname" ng-change="valName()">
+        </div>
+        <div class="form-group"> 
+            <b>Age</b> <input type="text" class = "form-control" ng-model="isage1" ng-change="valAge()">  
+            <a href = 'code_text/age.txt'> View Code</a><br> {{mes_age}}
+        </div>
+        <div class="form-group"> 
+            <b>Phone</b> <input type="text" class = "form-control" ng-model="isover" ng-change="valOver()">
+            <a href = 'code_text/mobile.txt'> View Code</a><br>  {{mes_over}}
+        </div>
+        <div class="form-group"> 
+            <b>Username</b> <input type="text" class = "form-control" ng-model="isuser" ng-change="valUser()"> 
+            <a href = 'code_text/username.txt'> View Code</a><br>  {{mes_user}}
+        </div>
+        <div class="form-group"> 
+            <b>Password</b> <input type="password" class = "form-control" ng-model="ispass" ng-change="valPass()">    
+            <a href = 'code_text/password.txt'> View Code</a><br>  {{mes_pass}}
+        </div>
+        <br>
+        <a href = 'login.html' class = "btn btn-primary" ng-click="addUsers()"> Add User </a>
+    </div>
+    </div>
+    </div>
+    </form>
+</div>
+</body>
+</html>

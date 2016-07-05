@@ -1,0 +1,19 @@
+$scope.users = [{isuser:'neha20',pwd:'neha20'}, {isuser:'nischal25',pwd:'nischal25'}];
+
+$scope.pwdcom = function() {
+        for(var i=0; i < $scope.users.length; i++)
+        {
+            if(validator.equals($scope.users[i].isuser, $scope.isuser1))
+            {
+                if(validator.equals($scope.users[i].pwd, $scope.pwd1))
+                {
+                    $scope.mes_pwd = "Valid password";
+                    break;
+                }
+                else
+                {
+                    $scope.mes_pwd = "Invalid password";
+                }
+            }
+        }
+    }

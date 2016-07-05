@@ -1,0 +1,12 @@
+$scope.valEmail = function() {
+        console.log(validator.isEmail($scope.isemail));
+
+        if(validator.isEmail($scope.isemail))
+        {
+            $scope.mes_alpha = "Valid Email";
+        }
+        else
+        {
+            $scope.mes_alpha = "Invalid Email";
+        }
+    }

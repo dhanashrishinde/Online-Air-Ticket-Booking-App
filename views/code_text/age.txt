@@ -1,0 +1,23 @@
+validator.extend('isAge', function (str) {
+        var message = "";
+
+        if(validator.isNull(str))
+            return false;
+        if(!validator.isNumeric(str))
+            return false;
+        if(!validator.isLength(str, 2, 2))
+            return false;
+        return true;
+    });
+
+
+    $scope.valAge = function() {
+        if(validator.isAge($scope.isage1))
+        {
+            $scope.mes_age ="Valid";
+        }
+        else
+        {
+            $scope.mes_age ="Invalid";
+        }
+    }
